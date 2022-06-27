@@ -38,17 +38,23 @@
                     {%  endif   %}
                 </div>
                 <duv class="form-check">
+                    {{ form.remember(class="form-check-input") }}
+                    {{ form.remember.label(class="form-check-label")  }}
                 </duv>
-                
             </fieldset>
+
             <div class="form-group">
                 {{ form.submit(class="btn btn-outline-info") }}
             </div>
+            
+            <small class="text-muted ml-2">
+                <a href="#">Forgot Password? </a>
+            </small>
         </form>
     </div>
     <div class = "border-top pt-3">
         <small class="text-muted">
-            Already have an Account? <a class = "ml-2" href="{{ url_for('login') }}"> Sign in </a>
+            Need an Account? <a class = "ml-2" href="{{ url_for('register') }}"> Register Here </a>
         </small>
     </div>
 {% endblock content %}
